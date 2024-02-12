@@ -45,11 +45,19 @@ export default function Navbar() {
 
   const servicesListItems = [
     {
-      title: "2",
+      title: "Posgrado",
       link: "/#",
     },
     {
-      title: "1",
+      title: "Educación Continua",
+      link: "/#",
+    },
+    {
+      title: "Biblioteca",
+      link: "/#",
+    },
+    {
+      title: "Becas",
       link: "/#",
     },
   ];
@@ -101,7 +109,7 @@ export default function Navbar() {
               navListMenuItems={aboutListItems}
             />
             <NavbarMenu
-              title={"Servicios"}
+              title={"Oferta Académica"}
               navListMenuItems={servicesListItems}
             />
             <NavbarLink title={"Admisiones"} link={"/#"} />

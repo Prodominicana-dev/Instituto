@@ -1,6 +1,13 @@
+import AcademicProgramsSection from "@/components/home/academicProgramsSection";
+import NewsSection from "@/components/home/newsSection";
 import WelcomeSection from "@/components/home/welcome";
-import Image from "next/image";
 
 export default function Home() {
-  return <WelcomeSection />;
+  return (
+    <main>
+      <WelcomeSection />
+      <NewsSection />
+      <AcademicProgramsSection />
+    </main>
+  );
 }
