@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const withMT = require("@material-tailwind/react/utils/withMT");
+const colors = require("tailwindcss/colors");
 
 const config: Config = withMT({
   content: [
@@ -14,6 +15,12 @@ const config: Config = withMT({
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        crimsonRed: "#C80F2E",
+      },
+    },
+    colors: {
+      ...colors,
     },
   },
   plugins: [],
