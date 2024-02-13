@@ -49,13 +49,13 @@ export default function FooterMobile() {
   return (
     <div className="flex flex-col xl:hidden">
       <div className="w-full h-full bg-blue-950 flex flex-col p-10 space-y-10">
-        <div className="flex ">
+        <div className="flex justify-center">
           <Image
             alt="logo"
-            src={"/svg/logos/prodominicana.svg"}
+            src={"/svg/logos/institutoWhite.svg"}
             width={600}
             height={600}
-            className="w-56"
+            className="w-32 xl:w-56"
           />
         </div>
         <div className="w-full h-full flex flex-col space-y-8 justify-center items-center ">
@@ -139,7 +139,7 @@ export default function FooterMobile() {
         </div>
       </div>
       <div className="w-full h-full bg-white flex flex-col divide-y">
-        <div className="w-full h-full">
+        {/* <div className="w-full h-full">
           <button
             onClick={toggleOpen}
             className="w-full h-full flex justify-between items-center text-blue-950 text-left font-bold text-lg px-10 py-5"
@@ -157,11 +157,11 @@ export default function FooterMobile() {
               ))}
             </div>
           </Collapse>
-        </div>
+        </div> */}
 
         <div className="w-full flex flex-col space-y-4  p-5 items-center">
-          <div className="w-full flex-col flex justify-start items-center h-full">
-            <p className="text-center">
+          <div className="w-full flex-col flex justify-start items-center h-full space-y-4">
+            <p className="text-center text-blue-950">
               {" "}
               © {year} {"Todos los derechos reservados. Desarrollado por"}{" "}
             </p>

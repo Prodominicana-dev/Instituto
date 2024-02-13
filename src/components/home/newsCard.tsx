@@ -23,21 +23,21 @@ export default function NewsCard({ title, date, image, link }: props) {
     <Link href={link} className="">
       <Card
         placeholder={undefined}
-        className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300"
+        className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 group"
       >
         <CardHeader
           placeholder={undefined}
           floated={false}
           shadow={false}
           color="transparent"
-          className="m-0 rounded-none h-3/6"
+          className="m-0 rounded-none h-full max-h-3/6"
         >
           <Image
             width={1920}
             height={1080}
             src={image}
             alt={title}
-            className="object-cover h-full"
+            className="object-cover h-full group-hover:scale-110 duration-300 transform"
           />
         </CardHeader>
         <CardBody

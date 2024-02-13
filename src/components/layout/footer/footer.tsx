@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="flex items-center">
           <Image
             alt="logo"
-            src={"/institutoProdominicana.svg"}
+            src={"/svg/logos/institutoWhite.svg"}
             width={600}
             height={600}
             className="w-40"

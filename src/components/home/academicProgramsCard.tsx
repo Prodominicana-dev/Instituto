@@ -35,7 +35,7 @@ export default function AcademicProgramsCard({
         floated={false}
         shadow={false}
         color="transparent"
-        className="m-0 rounded-none h-3/6"
+        className="m-0 rounded-none h-full max-h-3/6"
       >
         <Image
           width={1920}

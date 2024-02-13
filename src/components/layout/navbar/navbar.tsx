@@ -71,7 +71,7 @@ export default function Navbar() {
             alt=""
             width={1920}
             height={1080}
-            src={"/prodominicana.svg"}
+            src={"/institutoProdominicana.svg"}
             className="w-56 cursor-pointer"
           />
           <div className="flex flex-col space-y-4 w-2/12 ">

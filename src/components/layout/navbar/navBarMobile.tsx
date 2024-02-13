@@ -113,7 +113,7 @@ export default function NavBarMobile() {
               alt=""
               width={1920}
               height={1080}
-              src={"/prodominicana.svg"}
+              src={"/institutoProdominicana.svg"}
               className="w-56 cursor-pointer"
             />
           </div>
