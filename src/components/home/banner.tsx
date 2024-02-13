@@ -2,12 +2,56 @@
 import React from "react";
 import { Carousel } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Banner() {
+  const banners = [
+    {
+      title: "DIPLOMADOS ENERO - MARZO 2024",
+      subtitle:
+        "COMERCIO EXTERIOR EN CONCENTRACIÓN EN DESARROLLO DE NUEVOS MERCADOS",
+      description:
+        "Desarrolla tus habilidades para identificar y aprovechar nuevas oportunidades de mercado a nivel internacional.",
+      image: "/images/crucero.jpg",
+      infoLink: "/#",
+      admissionLink: "/#",
+    },
+    {
+      title: "DIPLOMADOS ABRIL - JUNIO 2024",
+      subtitle: "MARKETING DIGITAL ESTRATÉGICO",
+      description:
+        "Aprende las mejores prácticas y estrategias para llevar a cabo campañas de marketing digital efectivas y generar impacto en la audiencia.",
+      image: "/images/marketing.jpg",
+      infoLink: "/#",
+      admissionLink: "/#",
+    },
+    {
+      title: "DIPLOMADOS JULIO - SEPTIEMBRE 2024",
+      subtitle: "GESTIÓN DE PROYECTOS AGILES",
+      description:
+        "Adquiere habilidades para liderar y gestionar proyectos de manera ágil, aplicando metodologías como Scrum y Kanban para optimizar el rendimiento del equipo.",
+      image: "/images/agile.jpg",
+      infoLink: "/#",
+      admissionLink: "/#",
+    },
+    {
+      title: "DIPLOMADOS OCTUBRE - DICIEMBRE 2024",
+      subtitle: "ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE",
+      description:
+        "Desarrolla competencias en el análisis de datos para tomar decisiones informadas y estratégicas en el ámbito empresarial.",
+      image: "/images/analysis.jpg",
+      infoLink: "/#",
+      admissionLink: "/#",
+    },
+  ];
+
   return (
     <Carousel
       placeholder={undefined}
-      className=" w-full h-screen lg:h-[80vh]"
+      className="w-full h-screen lg:h-[80vh]"
+      autoplay
+      autoplayDelay={15000}
+      loop
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
@@ -22,41 +66,46 @@ export default function Banner() {
         </div>
       )}
     >
-      <div className="w-full h-full relative">
-        <img
-          src={"/images/crucero.jpg"}
-          alt=""
-          width={2048}
-          height={1313}
-          className="w-full h-full object-cover absolute"
-        />
-        <div className="flex justify-center items-center gap-5 bg-black/40 w-full h-full absolute z-10">
-          <div className="w-10/12 justify-center items-center lg:w-4/12 flex flex-col gap-4">
-            <div>
-              <p className="font-medium text-xl">
-                DIPLOMADOS ENERO - MARZO 2024
-              </p>
-              <h1 className="text-3xl font-bold">
-                COMERCIO EXTERIOR EN CONCENTRACIÓN EN DESARROLLO DE NUEVOS
-                MERCADOS
-              </h1>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
-            <div className="w-full flex flex-col lg:flex-row gap-5">
-              <button className="bg-red-600 w-full lg:w-1/2 h-14 rounded-sm">
-                MÁS INFORMACIÓN
-              </button>
-              <button className="bg-transparent ring-2 ring-white w-full lg:w-1/2 h-14 rounded-sm">
-                MÁS INFORMACIÓN
-              </button>
+      {banners.map((banner, index) => (
+        <div className="w-full h-full relative" key={index}>
+          <Image
+            src={banner.image}
+            alt=""
+            width={2048}
+            height={1313}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 flex justify-center items-center gap-5 bg-black/40 w-full h-full">
+            <div className="w-10/12 lg:w-8/12">
+              <div className="flex flex-col gap-4 w-full lg:w-6/12">
+                <div>
+                  <p className="font-medium text-xl uppercase">
+                    {banner.title}
+                  </p>
+                  <h1 className="text-3xl font-bold uppercase">
+                    {banner.subtitle}
+                  </h1>
+                </div>
+                <p>{banner.description}</p>
+                <div className="w-full flex flex-col lg:flex-row gap-5">
+                  <Link
+                    href={banner.infoLink}
+                    className="bg-red-600 w-full lg:w-1/2 h-14 rounded-sm text-white hover:text-white/60 uppercase duration-300 flex justify-center items-center"
+                  >
+                    MÁS INFORMACIÓN
+                  </Link>
+                  <Link
+                    href={banner.admissionLink}
+                    className="bg-transparent border-2 border-white hover:bg-black/30 w-full lg:w-1/2 h-14 rounded-sm uppercase duration-300 flex justify-center items-center"
+                  >
+                    Solicita tu admisión
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="hidden lg:block w-4/12"></div>
         </div>
-      </div>
+      ))}
     </Carousel>
   );
 }
