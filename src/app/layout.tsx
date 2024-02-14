@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/navbar/navbar";
 import NavBarMobile from "@/components/layout/navbar/navBarMobile";
 import Footer from "@/components/layout/footer/footer";
 import FooterMobile from "@/components/layout/footer/footerMobile";
+import "@mantine/carousel/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

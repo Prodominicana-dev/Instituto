@@ -19,10 +19,9 @@ export default function WelcomeSection() {
           Bienvenido al Instituto ProDominicana
         </h1>
         <p className="font-light">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          A la Vanguardia de la Educación y Desarrollo
         </p>
-        <div className="w-full grid grid-grid-cols-1 lg:grid-cols-4 gap-5 justify-center items-center">
+        <div className="w-full flex flex-col md:flex-row gap-5 justify-center items-center">
           <WelcomeCard
             color="bg-lightBlue-500"
             title="GRADUACIONES"
