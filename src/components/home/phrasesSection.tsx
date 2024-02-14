@@ -44,7 +44,7 @@ export default function PhrasesSection() {
   ];
 
   return (
-    <section className="w-full h-[60vh] relative">
+    <section className="w-full h-[70vh] relative">
       <Image
         src="/images/formalperson.jpg"
         width={1920}
@@ -68,7 +68,7 @@ export default function PhrasesSection() {
               <p className="text-xl sm:text-2xl xl:text-3xl font-light">
                 {phrase.author}
               </p>
-              <h1 className="text-2xl sm:text-4xl xl:text-6xl">
+              <h1 className="text-2xl sm:text-4xl xl:text-5xl">
                 “{phrase.text}”
               </h1>
             </div>
