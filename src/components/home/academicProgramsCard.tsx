@@ -28,7 +28,7 @@ export default function AcademicProgramsCard({
   return (
     <Card
       placeholder={undefined}
-      className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300"
+      className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 justify-self-center"
     >
       <CardHeader
         placeholder={undefined}

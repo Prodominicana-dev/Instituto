@@ -12,13 +12,13 @@ export default function WelcomeSection() {
   return (
     <section
       id="welcome"
-      className="w-full h-screen lg:h-[60vh] bg-gradient-to-b from-blue-600 to-blue-950 flex justify-center items-center"
+      className="w-full py-10 lg:h-[60vh] bg-gradient-to-b from-blue-600 to-blue-950 flex justify-center items-center"
     >
-      <div className="w-11/12 lg:w-full gap-3 lg:gap-8 flex flex-col  justify-center items-center">
-        <h1 className="font-light text-2xl lg:text-4xl">
+      <div className="w-10/12 lg:w-full gap-3 lg:gap-8 flex flex-col  justify-center items-center">
+        <h1 className="font-bold text-2xl lg:text-4xl xl:text-5xl">
           Bienvenido al Instituto ProDominicana
         </h1>
-        <p className="font-light">
+        <p className="font-light xl:text-xl">
           A la Vanguardia de la Educación y Desarrollo
         </p>
         <div className="w-full flex flex-col md:flex-row gap-5 justify-center items-center">

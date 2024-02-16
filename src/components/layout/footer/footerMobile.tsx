@@ -86,7 +86,7 @@ export default function FooterMobile() {
                   href={"mailto:servicios@prodominicana.gob.do"}
                   className="text-white hover:text-cyan-600 duration-300"
                 >
-                  instituto@prodominicana.gob.do
+                  Correo
                 </Link>
               </div>
             </div>

@@ -30,7 +30,7 @@ export default function EducationCard({
     <div className="p-5">
       <Card
         placeholder={undefined}
-        className="max-w-[30rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 group"
+        className="w-full max-w-[30rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 group"
       >
         <CardHeader
           placeholder={undefined}
@@ -62,7 +62,7 @@ export default function EducationCard({
             {description}
           </div>
           <div className="w-full flex flex-row justify-between">
-            <button className="bg-red-500 flex justify-center items-center text-white text-sm w-36 h-10 rounded-md">
+            <button className="bg-crimsonRed flex justify-center items-center text-white text-sm w-36 h-10 rounded-md">
               Conoce más
             </button>
           </div>

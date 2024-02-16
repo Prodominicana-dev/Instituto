@@ -20,7 +20,7 @@ interface props {
 
 export default function NewsCard({ title, date, image, link }: props) {
   return (
-    <Link href={link} className="">
+    <Link href={link} className="justify-self-center">
       <Card
         placeholder={undefined}
         className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 group"

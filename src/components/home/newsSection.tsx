@@ -30,7 +30,7 @@ export default function NewsSection() {
     <div className="w-full flex justify-center items-center bg-trueGray-100 lg:p-20 p-10">
       <div className="w-full lg:w-10/12 flex flex-col justify-center text-center space-y-10">
         <div className="space-y-5">
-          <h1 className="text-4xl xl:text-5xl text-black">
+          <h1 className=" text-2xl lg:text-4xl xl:text-5xl font-bold text-black">
             Noticias y eventos
           </h1>
           <p className="xl:text-xl text-gray-400">
