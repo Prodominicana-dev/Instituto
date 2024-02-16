@@ -1,10 +1,30 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from "@mantine/carousel";
 import "@mantine/carousel/styles.css";
 import EducationCard from "../cards/continuingEducationCard";
+import { Swiper, SwiperSlide } from "../swiperjs/swiper";
+import {
+  Autoplay,
+  EffectCoverflow,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function ContinuingEducationSection() {
+  const [currentSlide, setCurrentSlide] = React.useState(1);
+  const [loading, setLoading] = React.useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5);
+  }, []);
   const data = [
     {
       title: "Curso especializado Liderazgo, Creatividad e Innovación",
@@ -13,6 +33,54 @@ export default function ContinuingEducationSection() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       link: "",
       image: "/images/teacher.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
+    },
+    {
+      title: "Curso especializado en Derecho Constitucional",
+      date: "15 de marzo, 2024",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      link: "",
+      image: "/images/lawyer.jpg",
     },
     {
       title: "Curso especializado en Derecho Constitucional",
@@ -34,26 +102,40 @@ export default function ContinuingEducationSection() {
           ¡Explora oportunidades para crecer profesionalmente y alcanzar tus
           metas académicas!
         </p>
-        <div className="flex flex-col sm:flex-row gap-8 w-full justify-center">
-          <Carousel
-            withIndicators
-            height={400}
-            slideSize={{ base: "100%", sm: "50%" }}
-            loop
-            align="start"
-            className="w-full h-full flex justify-center"
-          >
-            {data.map(({ title, description, date, link, image }, index) => (
-              <EducationCard
-                key={index}
-                title={title}
-                date={date}
-                description={description}
-                link={link}
-                image={image}
-              />
-            ))}
-          </Carousel>
+
+        <div className="w-full">
+          {!loading && (
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              loop={true}
+              initialSlide={0}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 3, spaceBetween: 50 },
+              }}
+            >
+              {data.map(({ title, description, date, link, image }, index) => (
+                <SwiperSlide key={index}>
+                  <EducationCard
+                    title={title}
+                    date={date}
+                    description={description}
+                    link={link}
+                    image={image}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </div>
     </section>

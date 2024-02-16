@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section className="w-full py-10 lg:py-0 bg-white flex justify-center items-center">
+    <section className="w-full py-10  bg-white flex justify-center items-center">
       <div className="w-10/12 lg:w-8/12 h-5/6 flex flex-col gap-5 lg:gap-8">
         <h1 className="w-full text-start gap-3 lg:gap-8 text-black font-bold text-2xl lg:text-4xl xl:text-5xl">
           Contacto
