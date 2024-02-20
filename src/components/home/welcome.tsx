@@ -14,7 +14,7 @@ export default function WelcomeSection() {
       id="welcome"
       className="w-full py-10 lg:h-[60vh] bg-gradient-to-b from-blue-600 to-blue-950 flex justify-center items-center"
     >
-      <div className="w-10/12 lg:w-full gap-3 lg:gap-8 flex flex-col  justify-center items-center">
+      <div className="w-10/12 lg:w-full gap-3 lg:gap-8 flex flex-col  justify-center items-center text-white">
         <h1 className="font-bold text-2xl lg:text-4xl xl:text-5xl">
           Bienvenido al Instituto ProDominicana
         </h1>

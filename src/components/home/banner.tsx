@@ -77,7 +77,7 @@ export default function Banner() {
           />
           <div className="absolute inset-0 flex justify-center items-center gap-5 bg-black/40 w-full h-full">
             <div className="w-10/12 lg:w-8/12">
-              <div className="flex flex-col gap-4 w-full lg:w-6/12">
+              <div className="flex flex-col gap-4 w-full lg:w-6/12 text-white">
                 <div>
                   <p className="font-medium text-xl uppercase">
                     {banner.title}

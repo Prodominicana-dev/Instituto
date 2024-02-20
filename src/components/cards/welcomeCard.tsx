@@ -15,7 +15,7 @@ export default function WelcomeCard({
 }) {
   return (
     <div
-      className={`w-full md:w-80 h-28 md:h-40 ${color} rounded-sm flex flex-col justify-center gap-5 items-center`}
+      className={`w-full md:w-80 h-28 md:h-40 ${color} text-white rounded-sm flex flex-col justify-center gap-5 items-center`}
     >
       <div className="flex gap-2 justify-center items-center w-10/12">
         <h1 className="font-light text-base text-start lg:text-lg truncate w-10/12 text-white lg:w-10/12">

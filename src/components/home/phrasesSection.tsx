@@ -62,7 +62,7 @@ export default function PhrasesSection() {
         >
           {phrases.map((phrase, index) => (
             <div
-              className="flex flex-col justify-center items-center h-full p-16 lg:p-36 space-y-10 text-center"
+              className="flex flex-col justify-center items-center h-full p-16 lg:p-36 space-y-10 text-center text-white"
               key={index}
             >
               <p className="text-xl sm:text-2xl xl:text-3xl font-light">
