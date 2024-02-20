@@ -6,6 +6,7 @@ import {
   CardBody,
   Typography,
   CardFooter,
+  Button,
 } from "@material-tailwind/react";
 import React from "react";
 import Image from "next/image";
@@ -16,58 +17,54 @@ interface props {
   date: string;
   image: string;
   link: string;
-  description: string;
 }
 
-export default function EducationCard({
+export default function ContinuingEducationCard({
   title,
   date,
   image,
-  description,
   link,
 }: props) {
   return (
-    <div className="p-5">
-      <Card
+    <Card
+      placeholder={undefined}
+      className="max-w-[24rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 justify-self-center"
+    >
+      <CardHeader
         placeholder={undefined}
-        className="w-full max-w-[30rem] overflow-hidden h-full rounded-md hover:shadow-lg duration-300 group"
+        floated={false}
+        shadow={false}
+        color="transparent"
+        className="m-0 rounded-none h-full max-h-3/6"
       >
-        <CardHeader
-          placeholder={undefined}
-          floated={false}
-          shadow={false}
-          color="transparent"
-          className="m-0 rounded-none h-full max-h-3/6"
-        >
-          <Image
-            width={1920}
-            height={1080}
-            src={image}
-            alt={title}
-            className="object-cover h-full group-hover:scale-110 duration-300 transform"
-          />
-        </CardHeader>
-        <CardBody
-          placeholder={undefined}
-          className="flex flex-col gap-4 item-center h-full max-h-[24rem] justify-between"
-        >
+        <Image
+          width={1920}
+          height={1080}
+          src={image}
+          alt={title}
+          className="object-cover h-full"
+        />
+      </CardHeader>
+      <CardBody
+        placeholder={undefined}
+        className="flex flex-col item-center h-full max-h-[16rem] justify-between"
+      >
+        <div className="space-y-1">
           <div className="flex items-center space-x-1 text-blue-gray-500">
             <CalendarDaysIcon className="w-5" />
             <p className="text-xs">{date}</p>
           </div>
-          <div className="text-start text-blue-950 text-2xl font-bold line-clamp-2">
+          <div className="text-start text-blue-950 text-2xl font-bold line-clamp-4">
             {title}
           </div>
-          <div className="text-start text-gray-500 text-sm font-normal line-clamp-3">
-            {description}
-          </div>
-          <div className="w-full flex flex-row justify-between">
-            <button className="bg-crimsonRed flex justify-center items-center text-white text-sm w-36 h-10 rounded-md">
-              Conoce más
-            </button>
-          </div>
-        </CardBody>
-      </Card>
-    </div>
+        </div>
+        <Button
+          placeholder={undefined}
+          className="bg-crimsonRed text-white rounded-sm"
+        >
+          Ver mas
+        </Button>
+      </CardBody>
+    </Card>
   );
 }

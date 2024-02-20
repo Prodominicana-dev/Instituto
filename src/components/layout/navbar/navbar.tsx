@@ -62,6 +62,17 @@ export default function Navbar() {
     },
   ];
 
+  const studentsListItems = [
+    {
+      title: "Aula Virtual",
+      link: "https://aulavirtual.inst.prodominicana.gob.do",
+    },
+    {
+      title: "Autoservicio",
+      link: "https://prodominicana.probusrd.com",
+    },
+  ];
+
   return (
     <nav className="hidden xl:block">
       <GovPagesInfo />
@@ -112,12 +123,19 @@ export default function Navbar() {
               title={"Oferta Académica"}
               navListMenuItems={servicesListItems}
             />
+            <NavbarMenu
+              title={"Estudiantes"}
+              navListMenuItems={studentsListItems}
+            />
             <NavbarLink title={"Admisiones"} link={"/#"} />
             <NavbarLink title={"Noticias"} link={"/#"} />
             <NavbarLink title={"Contacto"} link={"/#"} />
             <NavbarLink title={"Transparencia"} link={"/#"} />
             <div className="h-10 flex space-x-3 text-white self-center">
-              <NavbarButton title={"Inicia tu admisión"} link={"/#"} />
+              <NavbarButton
+                title={"Inicia tu admisión"}
+                link={"https://prodominicana.probusrd.com/solicitud-admision"}
+              />
             </div>
           </div>
         </div>
