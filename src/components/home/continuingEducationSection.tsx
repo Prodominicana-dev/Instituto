@@ -57,7 +57,7 @@ export default function ContinuingEducationSection() {
             metas académicas!
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
           {academicPrograms.map((item, index) => (
             <ContinuingEducationCard
               title={item.title}
