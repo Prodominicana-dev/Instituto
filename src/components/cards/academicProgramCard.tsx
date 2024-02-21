@@ -30,7 +30,7 @@ export default function AcademicProgramCard({
     <div className="p-5">
       <Card
         placeholder={undefined}
-        className="w-full max-w-[30rem] overflow-hidden h-full max-h-[30rem] rounded-md hover:shadow-lg duration-300 group"
+        className="w-full max-w-[40rem] overflow-hidden h-[30rem] rounded-md hover:shadow-lg duration-300 group"
       >
         <CardHeader
           placeholder={undefined}

@@ -58,50 +58,78 @@ export default function NavBarMobile() {
     },
   ];
 
-  const ventanillaListItems = [
-    {
-      title: "Ventanilla Única de Inversión",
-      link: "https://vui.gob.do/",
-      icon: "/svg/logos/vuiIcon.svg",
-    },
-  ];
-
   const routes = [
     { title: "Inicio", link: "/", type: "link" },
     {
       title: "Nosotros",
       type: "menu",
       content: [
-        { title: "Quiénes Somos", link: "/" },
-        { title: "Despacho de la directora", link: "/" },
-        { title: "Estructura organizacional", link: "/" },
-        { title: "Marco legal", link: "/" },
+        {
+          title: "Quienes somos",
+          link: "/#",
+        },
+        {
+          title: "Historia",
+          link: "/#",
+        },
+        {
+          title: "Organigrama",
+          link: "/#",
+        },
+        {
+          title: "Despacho del rector",
+          link: "/#",
+        },
+        {
+          title: "Marco legal",
+          link: "/#",
+        },
       ],
     },
     {
-      title: "Servicios",
+      title: "Oferta Académica",
       type: "menu",
       content: [
-        { title: "Inversión", link: "/" },
-        { title: "Exportación", link: "/" },
+        {
+          title: "Posgrado",
+          link: "/#",
+        },
+        {
+          title: "Educación Continua",
+          link: "/#",
+        },
+        {
+          title: "Admisiones",
+          link: "/#",
+        },
+        {
+          title: "Biblioteca",
+          link: "/#",
+        },
+        {
+          title: "Becas",
+          link: "/#",
+        },
       ],
     },
     {
-      title: "Novedades",
+      title: "Estudiantes",
       type: "menu",
       content: [
-        { title: "Noticias", link: "/" },
-        { title: "Eventos", link: "/" },
-        { title: "Prodominicana TV", link: "/" },
-        { title: "Galería de fotos", link: "/" },
+        {
+          title: "Aula Virtual",
+          link: "https://aulavirtual.inst.prodominicana.gob.do",
+        },
+        {
+          title: "Autoservicio",
+          link: "https://prodominicana.probusrd.com",
+        },
       ],
     },
-    { title: "SheTrades", link: "/", type: "link" },
-    { title: "Transparencia", link: "/", type: "link" },
-    { title: "Contacto", link: "/contacto", type: "link" },
-    { title: "Instituto", link: "/", type: "link" },
-    { title: "Invertir", link: "/", type: "button" },
-    { title: "Exportar", link: "/", type: "button" },
+    { title: "Noticias", link: "/#", type: "link" },
+    { title: "Transparencia", link: "/#", type: "link" },
+    { title: "Contacto", link: "/#", type: "link" },
+    { title: "Solicita tu admisión", link: "/", type: "button" },
   ];
 
   return (
@@ -158,12 +186,6 @@ export default function NavBarMobile() {
         <Collapse open={menuOpen} className={`w-full flex-col`}>
           <div>
             <ToolsMenuCollapse title={"Portales"} content={portalsListItems} />
-          </div>
-          <div>
-            <ToolsMenuCollapse
-              title={"Ventanillas"}
-              content={ventanillaListItems}
-            />
           </div>
         </Collapse>
         {routes.map(({ title, link, type, content }, index) => (

@@ -53,6 +53,10 @@ export default function Navbar() {
       link: "/#",
     },
     {
+      title: "Admisiones",
+      link: "/#",
+    },
+    {
       title: "Biblioteca",
       link: "/#",
     },
@@ -112,7 +116,7 @@ export default function Navbar() {
               href={"/"}
               className="w-20 border-b-2 border-white flex justify-center items-center"
             >
-              <HomeIcon className="w-8 cursor-pointer" />
+              <HomeIcon className="w-8 cursor-pointer text-white" />
             </Link>
 
             <NavbarMenu
@@ -127,13 +131,12 @@ export default function Navbar() {
               title={"Estudiantes"}
               navListMenuItems={studentsListItems}
             />
-            <NavbarLink title={"Admisiones"} link={"/#"} />
             <NavbarLink title={"Noticias"} link={"/#"} />
-            <NavbarLink title={"Contacto"} link={"/#"} />
             <NavbarLink title={"Transparencia"} link={"/#"} />
+            <NavbarLink title={"Contacto"} link={"/#"} />
             <div className="h-10 flex space-x-3 text-white self-center">
               <NavbarButton
-                title={"Inicia tu admisión"}
+                title={"Solicita tu admisión"}
                 link={"https://prodominicana.probusrd.com/solicitud-admision"}
               />
             </div>

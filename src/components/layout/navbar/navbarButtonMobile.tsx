@@ -12,7 +12,7 @@ export default function NavbarButtonMobile({
     <>
       <Link
         href={link ? link : "/"}
-        className="w-full flex justify-center rounded-full shadow-md outline-none items-center bg-red-700  text-white text-left font-semibold text-lg py-2 mb-4"
+        className="w-full flex justify-center rounded-full shadow-md outline-none items-center bg-lightBlue-500  text-white text-left font-semibold text-lg py-2 mb-4"
       >
         {title}
       </Link>

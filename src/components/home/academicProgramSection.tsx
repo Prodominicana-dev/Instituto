@@ -41,6 +41,14 @@ export default function AcademicProgramSection() {
       image: "/images/lawyer.jpg",
     },
     {
+      title: "Especialidad en Gestión de Operaciones de Exportación",
+      date: "15 de marzo, 2024",
+      description:
+        "Optimiza el éxito en exportaciones con nuestra Especialidad en Gestión de Operaciones. Domina estrategias clave para liderar en el mercado global.",
+      link: "",
+      image: "/images/teacher.jpg",
+    },
+    {
       title:
         "Maestría en Finanzas Internacionales y Estrategias de Inversión Global",
       date: "15 de marzo, 2024",
